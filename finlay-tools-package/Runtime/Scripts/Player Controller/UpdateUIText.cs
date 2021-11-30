@@ -1,40 +1,43 @@
 using UnityEngine;
 using TMPro;
 
-public class UpdateUIText : MonoBehaviour
+namespace Finlay.FinlayTools
 {
-
-    private TextMeshProUGUI playerUIText;
-
-    private void Awake()
-    { playerUIText = GetComponent<TextMeshProUGUI>(); }
-
-
-    private void OnEnable()
+    public class UpdateUIText : MonoBehaviour
     {
-        StoryBeat.UpdateUIText += UpdateText;
-        StoryBeat.EndUIText += EndText;
 
-        Interaction.UpdateUIText += UpdateText;
-        Interaction.EndUIText += EndText;
+        private TextMeshProUGUI playerUIText;
+
+        private void Awake()
+        { playerUIText = GetComponent<TextMeshProUGUI>(); }
+
+
+        private void OnEnable()
+        {
+            StoryBeat.UpdateUIText += UpdateText;
+            StoryBeat.EndUIText += EndText;
+
+            Interaction.UpdateUIText += UpdateText;
+            Interaction.EndUIText += EndText;
+        }
+
+        private void OnDisable()
+        {
+            StoryBeat.UpdateUIText -= UpdateText;
+            StoryBeat.EndUIText -= EndText;
+
+            Interaction.UpdateUIText -= UpdateText;
+            Interaction.EndUIText -= EndText;
+        }
+
+
+        void UpdateText(string message)
+        { playerUIText.text = message; }
+
+        void EndText(float durationOfMessage)
+        { Invoke("EndTextNow", durationOfMessage); }
+
+        void EndTextNow()
+        { playerUIText.text = ""; }
     }
-
-    private void OnDisable()
-    {
-        StoryBeat.UpdateUIText -= UpdateText;
-        StoryBeat.EndUIText -= EndText;
-
-        Interaction.UpdateUIText -= UpdateText;
-        Interaction.EndUIText -= EndText;
-    }
-
-
-    void UpdateText(string message)
-    { playerUIText.text = message; }
-
-    void EndText(float durationOfMessage)
-    { Invoke("EndTextNow", durationOfMessage); }
-
-    void EndTextNow()
-    { playerUIText.text = ""; }
 }

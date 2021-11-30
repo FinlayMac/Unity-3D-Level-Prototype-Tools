@@ -1,25 +1,28 @@
 using UnityEngine;
 
-public class CollectObject : MonoBehaviour
+namespace Finlay.FinlayTools
 {
-    public bool DestroyAfterPickUp = true;
-
-    private Interaction interaction;
-
-    private void Awake()
-    { interaction = GetComponentInParent<Interaction>(); }
-
-
-    private void OnTriggerEnter(Collider other)
+    public class CollectObject : MonoBehaviour
     {
-        if (other.tag == "Player")
+        public bool DestroyAfterPickUp = true;
+
+        private Interaction interaction;
+
+        private void Awake()
+        { interaction = GetComponentInParent<Interaction>(); }
+
+
+        private void OnTriggerEnter(Collider other)
         {
+            if (other.tag == "Player")
+            {
 
-            interaction.CollectedKey();
+                interaction.CollectedKey();
 
-            if (DestroyAfterPickUp)
-            { Destroy(gameObject); }
+                if (DestroyAfterPickUp)
+                { Destroy(gameObject); }
+            }
         }
-    }
 
+    }
 }
