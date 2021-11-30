@@ -1,0 +1,19 @@
+{
+    "name": "dev.thedesign.finlaytoolspackage",
+    "version": "1.0.0",
+    "displayName": "Finlay Tools for 3D Level Editing",
+    "description": "An extended description on what this is about",
+    "unity": "2021.2",
+    "author": {
+        "name": "Finlay"
+
+
+    },
+    "dependencies": {
+        "com.unity.input-system": "1.1.1",
+        "com.unity.text-mesh-pro": "3.0.6"
+    }
+
+
+
+}
