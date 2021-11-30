@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RequiredKey: {fileID: 5773854557384635224}
   ShowAfterInter: {fileID: 0}
-  DestroyAfterInter: {fileID: 0}
+  DestroyAfterInter: {fileID: 5773854556343806639}
 --- !u!1 &5773854556343806639
 GameObject:
   m_ObjectHideFlags: 0

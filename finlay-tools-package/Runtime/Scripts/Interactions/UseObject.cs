@@ -1,20 +1,23 @@
 using UnityEngine;
 
-public class UseObject : MonoBehaviour
+namespace Finlay._3dToolsForLevelDesign
 {
-
-    private Interaction interaction;
-
-    private void Awake()
-    { interaction = GetComponentInParent<Interaction>(); }
-
-    // Start is called before the first frame update
-    private void OnTriggerEnter(Collider other)
+    public class UseObject : MonoBehaviour
     {
-        if (other.tag == "Player")
+
+        private Interaction interaction;
+
+        private void Awake()
+        { interaction = GetComponentInParent<Interaction>(); }
+
+        // Start is called before the first frame update
+        private void OnTriggerEnter(Collider other)
         {
-            //send signal to interaction
-            interaction.PlayerInUseZone();
+            if (other.tag == "Player")
+            {
+                //send signal to interaction
+                interaction.PlayerInUseZone();
+            }
         }
     }
 }
