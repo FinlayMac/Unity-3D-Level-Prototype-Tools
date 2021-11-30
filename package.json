@@ -10,8 +10,8 @@
 
     },
     "dependencies": {
-        "com.unity.input-system": "1.1.1",
-        "com.unity.text-mesh-pro": "3.0.6"
+        "com.unity.inputsystem": "1.1.1",
+        "com.unity.textmeshpro": "3.0.6"
     }
 
 
