@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5015211940594612249}
   - component: {fileID: 5015211940594612248}
+  - component: {fileID: 1836544290384521221}
   m_Layer: 0
   m_Name: Moving Object
   m_TagString: Untagged
@@ -80,6 +81,21 @@ MonoBehaviour:
   PrefabObjectToMove: {fileID: 5391061214678589932, guid: 0f53a524f6067db4b967322e424c76fb, type: 3}
   MovementSpeed: 3
   NodeWaitTime: 0.5
+--- !u!114 &1836544290384521221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015211940594612254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1dc33351baade1459d0d9355bc3c709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines: {r: 1, g: 1, b: 1, a: 1}
+  nodes: {r: 1, g: 0, b: 0, a: 1}
+  mesh: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &5015211940750507378
 GameObject:
   m_ObjectHideFlags: 0

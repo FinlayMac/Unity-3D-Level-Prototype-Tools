@@ -4,7 +4,7 @@ using UnityEngine;
 public class ObjectMoveBetweenPoints : MonoBehaviour
 {
     //the list of nodes to create the path are stored under the parent
-    private Transform pathParent;
+    public Transform pathParent;
     private Vector3[] waypoints;
 
 
@@ -23,7 +23,7 @@ public class ObjectMoveBetweenPoints : MonoBehaviour
     //for finding the next location
     private float DistanceToTarget;
 
-    private Vector3 startPosition, previousPosition, targetWaypoint;
+    private Vector3 targetWaypoint;
 
     void Awake()
     {
@@ -67,27 +67,4 @@ public class ObjectMoveBetweenPoints : MonoBehaviour
         }
     }
 
-
-
-    #region gizmos
-
-    void OnDrawGizmos()
-    {
-        if (pathParent)
-        {
-            startPosition = pathParent.GetChild(0).position;
-            previousPosition = startPosition;
-
-            foreach (Transform waypoint in pathParent)
-            {
-                Gizmos.color = Color.red;
-                Gizmos.DrawWireSphere(waypoint.position, .3f);
-                Gizmos.color = Color.white;
-                Gizmos.DrawLine(previousPosition, waypoint.position);
-                previousPosition = waypoint.position;
-            }
-            Gizmos.DrawLine(previousPosition, startPosition);
-        }
-    }
-    #endregion
 }
