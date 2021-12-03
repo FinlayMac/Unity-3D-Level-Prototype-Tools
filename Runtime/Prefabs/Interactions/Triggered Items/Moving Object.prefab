@@ -81,6 +81,7 @@ MonoBehaviour:
   PrefabObjectToMove: {fileID: 5391061214678589932, guid: 0f53a524f6067db4b967322e424c76fb, type: 3}
   MovementSpeed: 3
   NodeWaitTime: 0.5
+  shouldMoveOnAwake: 1
 --- !u!114 &1836544290384521221
 MonoBehaviour:
   m_ObjectHideFlags: 0

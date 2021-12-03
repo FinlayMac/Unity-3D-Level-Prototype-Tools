@@ -59,7 +59,9 @@ GameObject:
   - component: {fileID: 5977350640951702161}
   - component: {fileID: 5977350640951702163}
   - component: {fileID: 5977350640951702167}
+  - component: {fileID: 4922712272804735275}
   - component: {fileID: 5977350640951702156}
+  - component: {fileID: 4847712458947682279}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -121,6 +123,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.4
   m_Center: {x: 0, y: -0.4, z: 0}
+--- !u!114 &4922712272804735275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977350640951702166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d7ba9d73797bd4fa617e086fc776ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5977350640951702156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +154,18 @@ MonoBehaviour:
   CanWallJump: 1
   DoubleJumpMultiplyer: 1.2
   WallJumpMultiplyer: 1.2
+--- !u!114 &4847712458947682279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977350640951702166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64304c558eb2b844bacac362cebcdd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1024330715563563833
 PrefabInstance:
   m_ObjectHideFlags: 0

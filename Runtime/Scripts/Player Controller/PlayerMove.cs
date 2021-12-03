@@ -2,12 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//for new input system
-using UnityEngine.InputSystem;
-
-namespace Finlay._3dToolsForLevelDesign
+namespace Finlay._3dToolsForLevelDesign.Player
 {
-    public class MovePlayer : MonoBehaviour
+    public class PlayerMove : MonoBehaviour
     {
         public float PlayerMoveSpeed = 20f;         //def 20
         public float JumpStrength = 1300f;          //def 1300
@@ -48,14 +45,6 @@ namespace Finlay._3dToolsForLevelDesign
             rb = GetComponent<Rigidbody>();
             col = GetComponent<Collider>();
 
-            //Gets the input control system
-            controls = new PlayerControls();
-            //When the left stick is moved, set the value to a Vector 2 called direction
-            controls.MovePlayer._4DMovement.performed += ctx => direction = ctx.ReadValue<Vector2>();
-            //When the left stick is let go, set the value to a Vector 2 to 0
-            controls.MovePlayer._4DMovement.canceled += ctx => direction = Vector2.zero;
-            controls.MovePlayer.Jump.performed += ctx => Jump();
-
             SceneGravity = Physics.gravity.y;
 
             //gets the distance between the collider and Gameobject and adds the y size
@@ -64,15 +53,8 @@ namespace Finlay._3dToolsForLevelDesign
         }
 
 
-        void OnEnable()
-        { controls.MovePlayer.Enable(); }
-
-        void OnDisable()
-        { controls.MovePlayer.Disable(); }
-
         private void Update()
         {
-
             //shows where the player has been
             Debug.DrawRay(transform.position, rb.velocity * 0.1f, Color.yellow, 1f);
         }
@@ -81,6 +63,9 @@ namespace Finlay._3dToolsForLevelDesign
         void FixedUpdate()
         { Move(); }
 
+
+        public void UpdateDirection(Vector2 NewDirection)
+        { direction = NewDirection; }
 
         void Move()
         {
@@ -101,8 +86,7 @@ namespace Finlay._3dToolsForLevelDesign
             }
         }
 
-        //Jump is called when ever the action button is pressed
-        void Jump()
+        public void Jump()
         {
             //checks to see if player is on the ground
             if (CanJump == true)
