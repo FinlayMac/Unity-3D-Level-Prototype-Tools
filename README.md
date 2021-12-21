@@ -7,11 +7,10 @@ The tools are reliant on the New Input System and TextMeshPro (These are importe
 ## Table of Contents
 1. [Getting Started](#getting-started)
 2. [Adding the Player / Camera and UI](#adding-the-player-camera-and-ui)
-3. [Using Story Beats](#using-story-beats)
-4. [Using Interactions](#using-interactions)
-5. [Using Moving Objects](#using-moving-objects)
-6. [Using Teleporters](#using-teleporters)
-
+3. [Triggers](#triggers)
+4. [Activations](#activations)
+5. [Prefabs](#prefabs)
+6. [Others](#others)
 
 
 
@@ -44,14 +43,59 @@ Select the camera and locate the Follow Game Object Component. Drag the CameraTa
 ![Link-Camera](https://user-images.githubusercontent.com/34044928/144341970-a2247214-7b4c-4cd5-b9e0-6e0d7230fc50.png)
 
 
+## Triggers
+Triggers are used to activate functionality in the game. These are mostly interacted with by the player.
 
-## Using Story Beats
+### Zone Trigger
+When a player enters into an area, the trigger activates. When a player leaves the area, the trigger deactivates. Any 3D Collider can be used as long as the "Is Trigger" property is set to true. 
+
+### Pressure Plate Trigger
+When a GameObject with a 3D Collider collides with the pressure plate, the trigger activates. When the colliding object is removed, the trigger deactivates.
+
+### Pickup Trigger
+When the player collides with this GameObject, the trigger activates and this gameobject is destroyed. There is no way to deactivate this trigger.
+
+### Lever Trigger
+When the player presses the interact button, this trigger activates. When the player presses the interact button again, the trigger deactivates.
+
+### Key / Lock Trigger
+The player can collect a key GameObject. When the player enters the lock area with the key, this trigger is activated. There is no way to deactivate this trigger.
 
 
-## Using Interactions
 
 
-## Using Moving Objects
+
+## Activations
+Activations are the functionality that your triggers activate.
+
+### Show / Hide Objects
+When activated, the list of GameObjects will be enabled in the scene hierarchy - showing them. When deactivated, the list of GameObjects will be disabled - hiding them. Make sure you deactivate all the GameObjects you need hidden first.
+
+### Destroy Objects
+When activated, will destroy all GameObjects in the list. There is no deactivation. 
+
+### Text
+When activated, will display text for a duration of time before hiding. When deactivated, will immediatly hide the text.
+
+### Lights
+When activated, will turn on the light. When deactivated, will turn off the light.
+
+### Moving Objects
+When activated, will start moving the GameObject around on a set path. When deactivated, the GameObject will stop moving and stay in its current position. When reactivated, the GameObject will resume the path from its current position. 
+
+## Prefabs
+Some prefabs have been created to get you started. You can create 
+
+### Using Story Beats
 
 
-## Using Teleporters
+### Using Interactions
+
+
+
+
+## Others
+
+### Using Teleporters
+
+### Using Springs
