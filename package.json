@@ -1,9 +1,10 @@
 {
     "name": "dev.thedesign.finlaytoolspackage",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "displayName": "Finlay Tools for 3D Level Editing",
-    "description": "An extended description on what this is about",
+    "description": "Character Controllers, Triggers and Activations",
     "unity": "2021.2",
+	"documentationUrl": "https://github.com/FinlayMac/Unity-3D-Level-Prototype-Tools",
     "author": {
         "name": "Finlay"
 
@@ -12,7 +13,25 @@
     "dependencies": {
         "com.unity.inputsystem": "1.1.1",
         "com.unity.textmeshpro": "3.0.6"
+    },
+	"samples": [
+    {
+      "displayName": "Player, Camera, Canvas",
+      "description": "The basic character controller allowing movement around a scene.",
+      "path": "Samples/0. Player"
+    },
+	 {
+      "displayName": "Triggers and Activations",
+      "description": "prefabs which activate functions in the game.",
+      "path": "Samples/1. Functionality"
+    },
+	 {
+      "displayName": "Example Scene",
+      "description": "A scene showcasing the functionality of everything",
+      "path": "Samples/5. Example Scene"
     }
+	
+	]
 
 
 

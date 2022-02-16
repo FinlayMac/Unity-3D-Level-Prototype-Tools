@@ -1,5 +1,8 @@
-public interface IActivate
+namespace Finlay._3dToolsForLevelDesign
 {
- public void Activate();
- public void Deactivate();
+    public interface IActivate
+    {
+        public void Activate();
+        public void Deactivate();
+    }
 }

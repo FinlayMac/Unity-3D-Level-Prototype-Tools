@@ -2,16 +2,19 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(FunctionTester))]
-public class FunctionTesterGUI : Editor
+namespace Finlay._3dToolsForLevelDesign
 {
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(FunctionTester))]
+    public class FunctionTesterGUI : Editor
     {
-        DrawDefaultInspector();
+        public override void OnInspectorGUI()
+        {
+            DrawDefaultInspector();
 
-        FunctionTester functionTester = (FunctionTester)target;
-        
-        if (GUILayout.Button("Activate Function"))
-        { functionTester.RunFunction(); }
+            FunctionTester functionTester = (FunctionTester)target;
+
+            if (GUILayout.Button("Activate Function"))
+            { functionTester.RunFunction(); }
+        }
     }
 }

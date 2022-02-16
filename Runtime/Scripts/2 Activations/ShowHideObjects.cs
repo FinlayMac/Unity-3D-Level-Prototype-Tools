@@ -1,18 +1,21 @@
 using UnityEngine;
 
-public class ShowHideObjects : MonoBehaviour, IActivate
+namespace Finlay._3dToolsForLevelDesign
 {
-    public GameObject[] ObjectsToShow;
-
-    public void Activate()
+    public class ShowHideObjects : MonoBehaviour, IActivate
     {
-        foreach (GameObject child in ObjectsToShow)
-        { child.SetActive(true); }
-    }
+        public GameObject[] ObjectsToShow;
 
-    public void Deactivate()
-    {
-        foreach (GameObject child in ObjectsToShow)
-        { child.SetActive(false); }
+        public void Activate()
+        {
+            foreach (GameObject child in ObjectsToShow)
+            { child.SetActive(true); }
+        }
+
+        public void Deactivate()
+        {
+            foreach (GameObject child in ObjectsToShow)
+            { child.SetActive(false); }
+        }
     }
 }

@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class DestroyObjects : MonoBehaviour, IActivate
+namespace Finlay._3dToolsForLevelDesign
 {
-    public GameObject[] ObjectsToDestroy;
-
-    public void Activate()
+    public class DestroyObjects : MonoBehaviour, IActivate
     {
-        foreach (GameObject child in ObjectsToDestroy)
-        { Destroy(child); }
-    }
+        public GameObject[] ObjectsToDestroy;
 
-    public void Deactivate()
-    {
+        public void Activate()
+        {
+            foreach (GameObject child in ObjectsToDestroy)
+            { Destroy(child); }
+        }
 
+        public void Deactivate()
+        {
+
+        }
     }
 }

@@ -53,7 +53,7 @@ When a player enters into an area, the trigger activates. When a player leaves t
 When a GameObject with a 3D Collider collides with the pressure plate, the trigger activates. When the colliding object is removed, the trigger deactivates.
 
 ### Pickup Trigger
-When the player collides with this GameObject, the trigger activates and this gameobject is destroyed. There is no way to deactivate this trigger.
+When the player collides with this GameObject, the trigger activates and this GameObject is destroyed. There is no way to deactivate this trigger.
 
 ### Lever Trigger
 When the player presses the interact button, this trigger activates. When the player presses the interact button again, the trigger deactivates.
@@ -75,7 +75,7 @@ When activated, the list of GameObjects will be enabled in the scene hierarchy -
 When activated, will destroy all GameObjects in the list. There is no deactivation. 
 
 ### Text
-When activated, will display text for a duration of time before hiding. When deactivated, will immediatly hide the text.
+When activated, will display text for a duration of time before hiding. When deactivated, will immediately hide the text.
 
 ### Lights
 When activated, will turn on the light. When deactivated, will turn off the light.

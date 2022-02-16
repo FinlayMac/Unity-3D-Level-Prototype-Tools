@@ -1,23 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Teleport : MonoBehaviour
+namespace Finlay._3dToolsForLevelDesign
 {
-
-    public Transform positionToTeleportTo;
-    public Color DestinationColour = Color.green;
-    private void OnTriggerEnter(Collider other)
-    { other.gameObject.transform.position = positionToTeleportTo.position; }
-
-
-    private void OnDrawGizmos()
+    public class Teleport : MonoBehaviour
     {
-        if (positionToTeleportTo)
+
+        public Transform positionToTeleportTo;
+        public Color DestinationColour = Color.green;
+        private void OnTriggerEnter(Collider other)
+        { other.gameObject.transform.position = positionToTeleportTo.position; }
+
+
+        private void OnDrawGizmos()
         {
-            Gizmos.color = DestinationColour;
-            Gizmos.DrawLine(transform.position, positionToTeleportTo.position);
-            Gizmos.DrawWireCube(positionToTeleportTo.position, Vector3.one);
+            if (positionToTeleportTo)
+            {
+                Gizmos.color = DestinationColour;
+                Gizmos.DrawLine(transform.position, positionToTeleportTo.position);
+                Gizmos.DrawWireCube(positionToTeleportTo.position, Vector3.one);
+            }
         }
     }
 }
