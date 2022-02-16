@@ -52,11 +52,15 @@ When a player enters into an area, the trigger activates. When a player leaves t
 ### Pressure Plate Trigger
 When a GameObject with a 3D Collider collides with the pressure plate, the trigger activates. When the colliding object is removed, the trigger deactivates.
 
+![PressurePlate](https://user-images.githubusercontent.com/34044928/147014740-c2158d97-4fa5-44cc-b28e-c705c29188b1.gif)
+
 ### Pickup Trigger
 When the player collides with this GameObject, the trigger activates and this GameObject is destroyed. There is no way to deactivate this trigger.
 
 ### Lever Trigger
 When the player presses the interact button, this trigger activates. When the player presses the interact button again, the trigger deactivates.
+
+![Lever](https://user-images.githubusercontent.com/34044928/147014436-45d3e111-6aa5-4b66-8de3-8cdbbecfa1eb.gif)
 
 ### Key / Lock Trigger
 The player can collect a key GameObject. When the player enters the lock area with the key, this trigger is activated. There is no way to deactivate this trigger.
