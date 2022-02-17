@@ -15,7 +15,6 @@ namespace Finlay._3dToolsForLevelDesign
 
         public void Activate()
         {
-            Debug.Log("Testies");
             UpdateUIText?.Invoke(Message);
             EndUIText?.Invoke(DurationInSeconds);
 

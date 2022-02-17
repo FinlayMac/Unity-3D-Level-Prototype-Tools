@@ -9,13 +9,13 @@ namespace Finlay._3dToolsForLevelDesign
         public void Activate()
         {
             foreach (GameObject child in ObjectsToShow)
-            { child.SetActive(true); }
+            { child.SetActive(!child.activeInHierarchy); }
         }
 
         public void Deactivate()
         {
             foreach (GameObject child in ObjectsToShow)
-            { child.SetActive(false); }
+            { child.SetActive(!child.activeInHierarchy); }
         }
     }
 }

@@ -56,7 +56,7 @@ namespace Finlay._3dToolsForLevelDesign
             currentCouroutine = FollowPath(waypoints);
             StartCoroutine(currentCouroutine);
 
-            Debug.Log("Started coroutine");
+           // Debug.Log("Started coroutine");
         }
         public void Deactivate()
         {

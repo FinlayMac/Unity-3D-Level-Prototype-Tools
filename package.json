@@ -1,6 +1,6 @@
 {
     "name": "dev.thedesign.finlaytoolspackage",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "displayName": "Finlay Tools for 3D Level Editing",
     "description": "Character Controllers, Triggers and Activations",
     "unity": "2021.2",
@@ -24,6 +24,11 @@
       "displayName": "Triggers and Activations",
       "description": "prefabs which activate functions in the game.",
       "path": "Samples/1. Functionality"
+    },
+	 {
+      "displayName": "Other Prefabs - works in progress",
+      "description": "prefabs which activate functions in the game.",
+      "path": "Samples/2. Others"
     },
 	 {
       "displayName": "Example Scene",
