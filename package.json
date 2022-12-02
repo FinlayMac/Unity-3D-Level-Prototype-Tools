@@ -1,6 +1,6 @@
 {
     "name": "dev.thedesign.finlaytoolspackage",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "displayName": "Finlay Tools for 3D Level Editing",
     "description": "Character Controllers, Triggers and Activations",
     "unity": "2021.2",

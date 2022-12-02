@@ -6,7 +6,7 @@ namespace Finlay._3dToolsForLevelDesign
 {
     public class ZoneTrigger : MonoBehaviour
     {
-        public bool OnlyActivate = false;
+        public bool DeactivateWhenExit = false;
         public GameObject[] ActivatedObjects;
         private List<IActivate> objectsToActivate = new List<IActivate>();
 
@@ -24,7 +24,7 @@ namespace Finlay._3dToolsForLevelDesign
 
         private void OnTriggerExit()
         {
-            if (OnlyActivate == false)
+            if (DeactivateWhenExit)
             {
                 foreach (IActivate child in objectsToActivate)
                 { child.Deactivate(); }

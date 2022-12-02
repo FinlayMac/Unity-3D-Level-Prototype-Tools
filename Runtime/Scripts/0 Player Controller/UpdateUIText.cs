@@ -7,38 +7,66 @@ namespace Finlay._3dToolsForLevelDesign
     {
 
         private TextMeshProUGUI playerUIText;
+        private Animator animator;
+
+        private bool MessageRunning = false;
+        public float Messagelength = 0;
+        private int newMessageTrigger;
+        private int closeMessageTrigger;
 
         private void Awake()
-        { playerUIText = GetComponent<TextMeshProUGUI>(); }
+        {
+            playerUIText = GetComponentInChildren<TextMeshProUGUI>();
+            animator = GetComponent<Animator>();
+
+            newMessageTrigger = Animator.StringToHash("NewMessage");
+            closeMessageTrigger = Animator.StringToHash("CloseMessage");
+        }
 
 
         private void OnEnable()
         {
             ActivateText.UpdateUIText += UpdateText;
-            ActivateText.EndUIText += EndText;
-
-            // Interaction.UpdateUIText += UpdateText;
-            // Interaction.EndUIText += EndText;
+            ActivateText.ShowUIText += ShowForTime;
         }
 
         private void OnDisable()
         {
             ActivateText.UpdateUIText -= UpdateText;
-            ActivateText.EndUIText -= EndText;
-
-            // Interaction.UpdateUIText -= UpdateText;
-            // Interaction.EndUIText -= EndText;
+            ActivateText.ShowUIText -= ShowForTime;
         }
 
 
-        void UpdateText(string message)
-        { playerUIText.text = message; }
+        void UpdateText(string message) { playerUIText.text = message; }
 
-        void EndText(float durationOfMessage)
-        { Invoke("EndTextNow", durationOfMessage); }
+        void ShowForTime(float durationOfMessage)
+        {
+            if (durationOfMessage > 0)
+            {
+                animator.SetTrigger(newMessageTrigger);
+                MessageRunning = true;
+            }
+            else
+            {
+                animator.SetTrigger(closeMessageTrigger);
+                MessageRunning = false;
+            }
 
-        void EndTextNow()
-        { playerUIText.text = ""; }
+            Messagelength = durationOfMessage;
+        }
+
+        private void Update()
+        {
+            if (MessageRunning)
+            {
+                Messagelength -= Time.deltaTime;
+                if (Messagelength <= 0)
+                {
+                    animator.SetTrigger(closeMessageTrigger);
+                    MessageRunning = false;
+                }
+            }
+        }
     }
 
 }

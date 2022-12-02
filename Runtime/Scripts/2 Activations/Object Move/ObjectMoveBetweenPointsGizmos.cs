@@ -36,7 +36,7 @@ namespace Finlay._3dToolsForLevelDesign
                 if (parent.PrefabObjectToMove)
                 {
                     Gizmos.color = mesh;
-                    Gizmos.DrawMesh(parent.PrefabObjectToMove.GetComponent<MeshFilter>().sharedMesh, startPosition);
+                    Gizmos.DrawMesh(parent.PrefabObjectToMove.GetComponent<MeshFilter>().sharedMesh, startPosition, transform.rotation);
                 }
             }
 
