@@ -25,22 +25,25 @@ If you are prompted with a warning about the new input system, select Yes
 
 ![New-input-system](https://user-images.githubusercontent.com/34044928/144338031-2c8a2d36-c317-41aa-9270-b310f3d21bfc.png)
 
-The assets are imported into the packages section.
+You can import the assets by importing them through the samples section.
+![Samples](https://user-images.githubusercontent.com/34044928/205382819-25ca1f84-d838-4a01-b852-80dd037c6dc5.png)
 
 
 ## Adding the Player Camera and UI
-Inside the Prefabs > Player folder, drag the player, camera and UI prefabs into your scene.
+With the samples added to your Project Assets, look inside the Player, Camera, Canvas folder.
 
-![Player-Location](https://user-images.githubusercontent.com/34044928/144341267-fc2f38ab-ddc3-45f2-9428-1b62273a74ea.png)
+Drag the player, camera and UI prefabs into the scene hierarchy to place them correctly.
 
-When adding the UI, you will be prompted to import TMP Essentials (You don't need the examples and extras)
+![Adding-To-Scene](https://user-images.githubusercontent.com/34044928/205383717-884e9b2c-e149-42df-aad4-745651354a2a.png)
+
+
+When adding the UI, you might be prompted to import TMP Essentials (You don't need the examples and extras)
 
 ![TextMeshPro](https://user-images.githubusercontent.com/34044928/144338444-cf268af6-85e2-4edf-a942-8bc81b0cc6e7.png)
 
-For the camera to follow the player correctly, position the camera relative to the player.
-Select the camera and locate the Follow Game Object Component. Drag the CameraTarget child from the Player instance into the Game Object to Follow section.
+For the camera to follow the player correctly, drag the CameraTarget child from the Player instance into the Game Object to Follow section.
 
-![Link-Camera](https://user-images.githubusercontent.com/34044928/144341970-a2247214-7b4c-4cd5-b9e0-6e0d7230fc50.png)
+![Link-Camera](https://user-images.githubusercontent.com/34044928/205384393-58ce044e-9193-4604-b990-692a002021b2.png)
 
 
 ## Triggers
